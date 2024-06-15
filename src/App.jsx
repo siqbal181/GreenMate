@@ -13,7 +13,7 @@ const userData = {
 
 function App() {
   return (
-    <>
+    <div className='app'>
       <BrowserRouter>
         {/* <Navbar /> */}
         <Navbar />
@@ -24,7 +24,7 @@ function App() {
         </Routes>
         <BottomBar />
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
