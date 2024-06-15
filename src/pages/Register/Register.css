@@ -1,0 +1,19 @@
+.walk-box, .car-box, .bike-box, .train-box, .shower-box, .bath-box, .cup-box, .tote-box {
+  border: 0.1rem solid black; 
+  border-radius: 0.5rem;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem; 
+}
+
+.transport-encasing, .shower-encasing, .tote-encasing {
+  display: flex;
+  justify-content: center;
+}
+
+.transport-question, .shower-question, .disposable-question {
+  font-size: 1.5rem;
+}
