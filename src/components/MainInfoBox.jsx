@@ -11,7 +11,7 @@ const MainInfoBox = ({userData}) => {
         <h2 className="main-info-avg">Total so far: { userData.dailyAvg }</h2>
       </div>
       <div className="main-info-right">
-        <img src="/images/green-circle.png" alt="progress circle graph" className="info-circles" />
+        <img src="/images/circles1.png" alt="progress circle graph" className="info-circles" />
       </div>
     </div>
   )

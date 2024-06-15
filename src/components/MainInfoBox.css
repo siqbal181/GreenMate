@@ -3,12 +3,26 @@
   margin: 10px auto;
   background-color: var(--green-600);
   border-radius: 15px;
-  padding: 20px;
+  padding: 10px 10px;
   box-shadow: 2px 2px 9px 4px rgba(0, 0, 0, 0.5);
   border: 1px solid var(--green-700);
 }
 
+.main-info-left h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 
+}
+
+.main-info-left h2 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+
+}
+
+.main-info-right {
+  padding-left: 10px;
+}
 
 .info-circles {
   max-width: 150px;
