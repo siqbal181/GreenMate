@@ -34,9 +34,9 @@ export const Register = () => {
   };
 
   return (
-    <div>
+    <div className='reg-page'>
       <p className='register-title'>Registration Final Step</p>
-    <form>
+    <form className='reg-form'>
       <div className="transport-method">
         <p className="transport-question">What are your methods of transport?</p>
         <div className="transport-encasing">

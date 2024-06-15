@@ -29,7 +29,7 @@ export const DailyQuestions = () => {
   };
 
   return (
-    <div className="daily-questions-encasing">
+    <div className="daily-questions-encasing info-container">
         <div className="question-counter">{`${answeredCount}/10`}</div>
         <div className="question">
           {!completed ? (
