@@ -1,23 +1,27 @@
 /* eslint-disable react/prop-types */
-import "./AchievementsWidget.css"
+import { useNavigate } from "react-router-dom";
+import "./AchievementsWidget.css";
 
 const AchievementsWidget = ({ badges }) => {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/achievements");
+  };
+
   return (
-    <div className="info-container">
-      <span>Achivements Overview</span>
-      <span>See more</span>
+    <div className="info-container widget-container">
+      <span>Achievements Overview</span>
+      <span className="see-more-text" onClick={handleNavigate}>See more</span>
       <div className="badges-container">
-        {badges.map((badge, index) => (
-          index < 3 && (
-            <div key={badge.id} className="badge">
-              <img src={badge.imageUrl} alt={badge.name} />
-              <span>{badge.name}</span>
-            </div>
-          )
+        {badges.slice(0, 3).map((badge) => (
+          <div key={badge.id} className="badge">
+            <img src={badge.imageUrl} alt={badge.name} className="badge-image" />
+          </div>
         ))}
-        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default AchievementsWidget
+export default AchievementsWidget;
