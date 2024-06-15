@@ -34,9 +34,11 @@ export const Register = () => {
   };
 
   return (
+    <div>
+      <p className='register-title'>Registration Final Step</p>
     <form>
       <div className="transport-method">
-        <p className="transport-question">What is your method(s) of transport?</p>
+        <p className="transport-question">What are your methods of transport?</p>
         <div className="transport-encasing">
           <label className="checkbox-label">
             <input type="checkbox" name="transport" value="Car" onChange={handleTransportChange} />
@@ -84,5 +86,6 @@ export const Register = () => {
       </div>
       <button type="submit" className="submit-button">Submit</button>
     </form>
+    </div>
   );
 };

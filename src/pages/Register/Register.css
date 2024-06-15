@@ -22,6 +22,11 @@ form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.register-title {
+  font-size: 1.8rem;
+  padding-bottom: 2rem;
+}
+
 .transport-method, .shower-or-bath, .disposable-choice {
   margin-bottom: 1rem;
 }
