@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Register } from './pages/Register/Register';
+import { DailyQuestions } from './components/DailyQuestions/DailyQuestions';
 import Homepage from './pages/Homepage';
 import Navbar from './components/Navbar';
 import BottomBar from './components/BottomBar';
@@ -14,6 +15,8 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <DailyQuestions/>
+        {/* <Navbar /> */}
         <Navbar />
         <Routes>
           <Route path='/register' element={<Register/>}/>
