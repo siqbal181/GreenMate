@@ -1,13 +1,7 @@
-.page-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
 .daily-planning {
   padding: 50px;
   text-align: center;
+  max-height: var(--page-height);
 }
 
 .daily-planning h2 {
