@@ -1,19 +1,81 @@
-.walk-box, .car-box, .bike-box, .train-box, .shower-box, .bath-box, .cup-box, .tote-box {
-  border: 0.1rem solid black; 
-  border-radius: 0.5rem;
-  height: 4rem;
-  width: 4rem;
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0.5rem; 
+  height: 100vh;
 }
 
-.transport-encasing, .shower-encasing, .tote-encasing {
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px; /* Limit width for iPhone 12 screen */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.transport-method, .shower-or-bath, .disposable-choice {
+  margin-bottom: 1rem;
+}
+
+.transport-encasing, .shower-encasing, .disposable-encasing {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap; /* Ensure checkboxes wrap to the next line if needed */
+  justify-content: flex-start; /* Align checkboxes from left to right */
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.checkbox-label:hover {
+  background-color: #f0f0f0;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.emoji {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .transport-question, .shower-question, .disposable-question {
   font-size: 1.5rem;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.submit-button:active {
+  background-color: #0056b3;
+  transform: translateY(1px);
 }
