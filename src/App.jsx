@@ -7,6 +7,17 @@ import BottomBar from './components/BottomBar';
 import Leaderboard from './components/Leaderboard';
 import AchievementPage from './components/AchievementPage';
 import { DailyPlanning } from './pages/DailyPlanning/DailyPlanning';
+import AwardImg1 from './assets/award1.png';
+import AwardImg2 from './assets/award2.png';
+import AwardImg3 from './assets/award3.png';
+import AwardImg4 from './assets/award4.png';
+
+const myBadges = [
+  { id: 1, name: 'Green Start', imageUrl: AwardImg1 },
+  { id: 2, name: 'Eco Progress', imageUrl: AwardImg2 },
+  { id: 3, name: 'Carbon Champion', imageUrl: AwardImg3 },
+  { id: 4, name: 'Sustainability Steps', imageUrl: AwardImg4 }
+];
 
 const userData = {
   totalPoints: 100,
@@ -23,7 +34,7 @@ const AppContent = () => {
     <>
       {showNavOrBottom && <Navbar />}
       <Routes>
-        <Route path='/' element={<Homepage userData={userData} />} />
+        <Route path='/' element={<Homepage userData={userData} badges={myBadges} />} />
         <Route path='/daily-planning' element={<DailyPlanning />} />
         <Route path='/register' element={<Register />} />
         <Route path='/leaderboard' element={<Leaderboard />} />

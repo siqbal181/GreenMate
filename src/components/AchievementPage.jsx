@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Badge from './Badge';
 import AwardImg1 from '../assets/award1.png';
 import AwardImg2 from '../assets/award2.png';
@@ -48,6 +48,7 @@ const styles = {
     padding: '8px',
     display: 'flex',
     justifyContent: 'center',
+    height: '86vh'
   },
   card: {
     backgroundColor: '#f0f0f0',
