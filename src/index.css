@@ -25,11 +25,8 @@
 }
 
 .page-container {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   height: var(--page-height);
-  background-color: var(--green-300);
 }
 
 .flex-container {
