@@ -26,6 +26,8 @@ const AppContent = () => {
         <Route path='/' element={<Homepage userData={userData} />} />
         <Route path='/daily-planning' element={<DailyPlanning />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/leaderboard' element={<Leaderboard />} />
+        <Route path='/achievements' element={<AchievementPage />} />
       </Routes>
       {showNavOrBottom && <BottomBar />}
     </>
@@ -36,16 +38,6 @@ function App() {
   return (
     <div className='app'>
       <BrowserRouter>
-        {/* <Navbar /> */}
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Homepage userData={userData} />} />
-        
-          <Route path='/register' element={<Register/>}/>
-          <Route path='/leaderboard' element={<Leaderboard />} />
-          <Route path='/achievements' element={<AchievementPage />} />
-        </Routes>
-        <BottomBar />
         <AppContent />
       </BrowserRouter>
     </div>
