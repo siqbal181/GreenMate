@@ -52,3 +52,8 @@
   box-shadow: 4px 3px 8px 1px rgba(0, 0, 0, 0.2), 2px 2px 5px 1px rgba(0, 0, 0, 0.5), inset 2px 2px 3px 0px rgba(255, 255, 255, 0.6);
   border: 1px solid var(--green-700);
 }
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}

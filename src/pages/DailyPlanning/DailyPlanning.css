@@ -58,3 +58,15 @@
   font-weight: bold;
   margin-top: 20px;
 }
+
+.sustainable-checklist-item {
+  padding: 1.5rem;
+}
+
+.text-and-checkbox {
+  font-size: 1.5rem;
+}
+
+.item-label {
+  padding-left: 1rem;
+}

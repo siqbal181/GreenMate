@@ -63,14 +63,14 @@ export const DailyPlanning = () => {
       <div key={plan}>
         <ul>
           {sustainabilityChecklists[plan].map(item => (
-            <li key={item}>
-              <label>
+            <li key={item} className='sustainable-checklist-item'>
+              <label className='text-and-checkbox'>
                 <input
                   type="checkbox"
                   checked={completedChecklists[plan] && completedChecklists[plan][item]}
                   onChange={() => handleCheckboxChange(plan, item)}
                 />
-                {item}
+                <span className='item-label'>{item}</span>
               </label>
             </li>
           ))}
