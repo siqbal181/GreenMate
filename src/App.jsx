@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Register } from './pages/Register/Register';
 import Homepage from './pages/Homepage';
 import Navbar from './components/Navbar';
 import BottomBar from './components/BottomBar';
@@ -15,6 +16,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
+          <Route path='/register' element={<Register/>}/>
           <Route path='/' element={<Homepage userData={userData} />} />
         </Routes>
         <BottomBar />
