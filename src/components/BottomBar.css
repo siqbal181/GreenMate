@@ -2,9 +2,19 @@
   height: var(--footer-height);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: var(--green-500);
   color: white;
   padding: 10px;
   font: 1.5rem;
+}
+.nav-link {
+color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color:coral;
 }

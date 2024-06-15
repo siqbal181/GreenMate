@@ -5,6 +5,8 @@ import { Register } from './pages/Register/Register';
 import Homepage from './pages/Homepage';
 import Navbar from './components/Navbar';
 import BottomBar from './components/BottomBar';
+import Leaderboard from './components/Leaderboard';
+import AchievementPage from './components/AchievementPage';
 
 const userData = {
   totalPoints: 100,
@@ -21,6 +23,8 @@ function App() {
           <Route path='/' element={<Homepage userData={userData} />} />
         
           <Route path='/register' element={<Register/>}/>
+          <Route path='/leaderboard' element={<Leaderboard />} />
+          <Route path='/achievements' element={<AchievementPage />} />
         </Routes>
         <BottomBar />
       </BrowserRouter>
