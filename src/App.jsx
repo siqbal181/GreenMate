@@ -4,6 +4,8 @@ import { Register } from './pages/Register/Register';
 import Homepage from './pages/Homepage';
 import Navbar from './components/Navbar';
 import BottomBar from './components/BottomBar';
+import Leaderboard from './components/Leaderboard';
+import AchievementPage from './components/AchievementPage';
 import { DailyPlanning } from './pages/DailyPlanning/DailyPlanning';
 
 const userData = {
@@ -24,6 +26,8 @@ const AppContent = () => {
         <Route path='/' element={<Homepage userData={userData} />} />
         <Route path='/daily-planning' element={<DailyPlanning />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/leaderboard' element={<Leaderboard />} />
+        <Route path='/achievements' element={<AchievementPage />} />
       </Routes>
       {showNavOrBottom && <BottomBar />}
     </>
