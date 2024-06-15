@@ -8,7 +8,8 @@ import { DailyPlanning } from './pages/DailyPlanning/DailyPlanning';
 
 const userData = {
   totalPoints: 100,
-  dailyAvg: 10
+  dailyAvg: 10,
+  monthAvg: 17
 }
 
 function App() {

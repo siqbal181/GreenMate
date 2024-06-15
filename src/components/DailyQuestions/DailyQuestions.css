@@ -16,7 +16,7 @@
 .question-counter {
   top: 0.5rem;
   left: 0.5rem;
-  padding: 0.3rem 0.5rem;
+  padding: 0.3rem 0;
   border-radius: 0.2rem;
   font-size: 0.8rem;
   font-weight: bold;
@@ -33,17 +33,21 @@
 }
 
 .swipe-button {
-  background-color: #007bff;
-  color: #ffffff;
+  background-color: #d4f4f0;
+  color: #0e0e2c;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
+  border-radius: 0.4rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-.swipe-button:hover {
-  background-color: #0056b3;
+  font-weight: bold;
+  border: 1px solid #3c954f;
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  .swipe-button:hover {
+    background-color: #7aebe1;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.4);
 }
 
 .completion-message {
