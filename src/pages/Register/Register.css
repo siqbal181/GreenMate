@@ -18,8 +18,8 @@ form {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
-  width: 90%;
-  max-width: 400px; /* Limit width for iPhone 12 screen */
+  width: 100%;
+  max-width: 400px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -29,8 +29,8 @@ form {
 
 .transport-encasing, .shower-encasing, .disposable-encasing {
   display: flex;
-  flex-wrap: wrap; /* Ensure checkboxes wrap to the next line if needed */
-  justify-content: flex-start; /* Align checkboxes from left to right */
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .checkbox-label {
@@ -53,11 +53,11 @@ form {
 
 .emoji {
   margin-right: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .transport-question, .shower-question, .disposable-question {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .submit-button {
