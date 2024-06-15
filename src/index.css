@@ -4,6 +4,13 @@
   --nav-height: 7vh;
   --footer-height: 7vh;
   --page-height: calc(100vh - var(--nav-height) - var(--footer-height));
+
+  --green-300: #8ff162;
+  --green-400: #5ecb4f;
+  --green-500: #37ab30;
+  --green-600: #298a22;
+  --green-700: #1b6d17;
+  --green-800: #0f4f0d;
 }
 
 * {
@@ -21,7 +28,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: var(--page-height); 
+  height: var(--page-height);
+  background-color: var(--green-300);
 }
 
 .flex-container {
