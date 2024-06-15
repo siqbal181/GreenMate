@@ -21,13 +21,14 @@
 }
 
 .app {
-  display: flex;
+  /* width: 100vw; */
+  /* display: flex; */
 }
 
 .page-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
   height: var(--page-height);
   background-color: var(--green-300);
 }

@@ -2,13 +2,15 @@
   border: 0.1rem solid #dcdcdc;
   border-radius: 0.3rem;
   height: 9rem;
-  max-width: 90vw;
+  width: 90vw;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
   position: relative;
+  background-color: #f1bfbd;
+  margin: 10px auto;
 }
 
 .question-counter {
