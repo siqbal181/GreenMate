@@ -1,18 +1,30 @@
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .daily-planning {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 50px;
   text-align: center;
 }
 
 .daily-planning h2 {
-  margin-bottom: 20px;
+  margin-bottom: 70px;
 }
 
 .checkbox-label {
   display: block;
   margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to start from the same left side */
+  margin: 0 auto; /* Center the container */
 }
 
 .daily-planning ul {

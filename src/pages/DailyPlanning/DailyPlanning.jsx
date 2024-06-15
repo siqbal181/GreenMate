@@ -2,17 +2,17 @@ import { useState, useEffect } from 'react';
 import './DailyPlanning.css';
 
 const sustainabilityChecklists = {
-  'go to work': ['Walk to work', 'Bring reusable cup for coffee', 'Use public transportation'],
-  'go shopping': ['Use reusable bags', 'Choose locally sourced products', 'Avoid single-use plastics'],
-  'take a shower': ['Shower less than 5 minutes', 'Use eco-friendly shower products', 'Turn off water when not needed'],
-  'work from home': ['Use natural light instead of artificial', 'Minimize paper usage', 'Unplug unused electronics']
+  'Go to work': ['Walk to work', 'Bring reusable cup for coffee', 'Use public transportation'],
+  'Go shopping': ['Use reusable bags', 'Choose locally sourced products', 'Avoid single-use plastics'],
+  'Take a shower': ['Shower less than 5 minutes', 'Use eco-friendly shower products', 'Turn off water when not needed'],
+  'Work from home': ['Use natural light instead of artificial', 'Minimize paper usage', 'Unplug unused electronics']
 };
 
 const allPlans = [
-  { id: 'go to work', label: 'Go to work' },
-  { id: 'go shopping', label: 'Go shopping' },
-  { id: 'take a shower', label: 'Take a shower' },
-  { id: 'work from home', label: 'Work from home' }
+  { id: 'Go to work', label: 'Go to work' },
+  { id: 'Go shopping', label: 'Go shopping' },
+  { id: 'Take a shower', label: 'Take a shower' },
+  { id: 'Work from home', label: 'Work from home' }
 ];
 
 export const DailyPlanning = () => {
@@ -21,7 +21,6 @@ export const DailyPlanning = () => {
   const [allCompleted, setAllCompleted] = useState(false);
   const [showSustainabilityChecklist, setShowSustainabilityChecklist] = useState(false);
 
-  // Update allCompleted whenever completedChecklists changes
   useEffect(() => {
     const isAllCompleted = selectedPlans.every(plan => {
       return sustainabilityChecklists[plan].every(item =>
@@ -56,13 +55,12 @@ export const DailyPlanning = () => {
     setSelectedPlans([]);
     setCompletedChecklists({});
     setAllCompleted(false);
-    setShowSustainabilityChecklist(false); // Reset back to initial state
+    setShowSustainabilityChecklist(false);
   };
 
   const renderChecklists = () => {
     return selectedPlans.map(plan => (
       <div key={plan}>
-        <h3>{plan}</h3>
         <ul>
           {sustainabilityChecklists[plan].map(item => (
             <li key={item}>
@@ -86,18 +84,19 @@ export const DailyPlanning = () => {
       {!showSustainabilityChecklist ? (
         <div>
           <h2>Daily Planning Checklist</h2>
-          <p>Select your daily plans:</p>
-          {allPlans.map(plan => (
-            <label key={plan.id} className="checkbox-label">
-              <input
-                type="checkbox"
-                id={plan.id}
-                checked={selectedPlans.includes(plan.id)}
-                onChange={() => handlePlanSelection(plan.id)}
-              />
-              {plan.label}
-            </label>
-          ))}
+          <div className="checkbox-container">
+            {allPlans.map(plan => (
+              <label key={plan.id} className="checkbox-label">
+                <input
+                  type="checkbox"
+                  id={plan.id}
+                  checked={selectedPlans.includes(plan.id)}
+                  onChange={() => handlePlanSelection(plan.id)}
+                />
+                {plan.label}
+              </label>
+            ))}
+          </div>
           <br />
           <button onClick={handleSubmitPlans} disabled={selectedPlans.length === 0}>Submit Plans</button>
         </div>
