@@ -29,11 +29,11 @@
 
 .swipe-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .swipe-button {
-  background-color: #d4f4f0;
+  background-color: #e9fefc;
   color: #0e0e2c;
   border: none;
   padding: 0.5rem 1rem;
@@ -43,6 +43,7 @@
   font-weight: bold;
   border: 1px solid #3c954f;
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
+  width: 100px;
   }
   
   .swipe-button:hover {
