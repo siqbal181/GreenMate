@@ -1,9 +1,11 @@
-import React from 'react'
+import MainInfoBox from '../components/MainInfoBox'
+import './Homepage.css'
 
 const Homepage = () => {
   return (
-    <div>
-      I am the homepage
+    <div className='page-container'>
+      
+      <MainInfoBox />
     </div>
   )
 }

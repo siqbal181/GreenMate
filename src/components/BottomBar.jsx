@@ -1,10 +1,11 @@
 // import React from 'react'
+import './BottomBar.css';
 
 const BottomBar = () => {
   return (
-    <div>
+    <footer className='bottom-bar'>
       BottomBar
-    </div>
+    </footer>
   )
 }
 
