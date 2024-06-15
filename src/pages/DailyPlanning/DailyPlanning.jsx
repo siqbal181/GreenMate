@@ -2,17 +2,17 @@ import { useState, useEffect } from 'react';
 import './DailyPlanning.css';
 
 const sustainabilityChecklists = {
-  'go to work': ['Walk to work', 'Bring reusable cup for coffee', 'Use public transportation'],
-  'go shopping': ['Use reusable bags', 'Choose locally sourced products', 'Avoid single-use plastics'],
-  'take a shower': ['Shower less than 5 minutes', 'Use eco-friendly shower products', 'Turn off water when not needed'],
-  'work from home': ['Use natural light instead of artificial', 'Minimize paper usage', 'Unplug unused electronics']
+  'Go to work': ['Walk to work', 'Bring reusable cup for coffee', 'Use public transportation'],
+  'Go shopping': ['Use reusable bags', 'Choose locally sourced products', 'Avoid single-use plastics'],
+  'Take a shower': ['Shower less than 5 minutes', 'Use eco-friendly shower products', 'Turn off water when not needed'],
+  'Work from home': ['Use natural light instead of artificial', 'Minimize paper usage', 'Unplug unused electronics']
 };
 
 const allPlans = [
-  { id: 'go to work', label: 'Go to work' },
-  { id: 'go shopping', label: 'Go shopping' },
-  { id: 'take a shower', label: 'Take a shower' },
-  { id: 'work from home', label: 'Work from home' }
+  { id: 'Go to work', label: 'Go to work' },
+  { id: 'Go shopping', label: 'Go shopping' },
+  { id: 'Take a shower', label: 'Take a shower' },
+  { id: 'Work from home', label: 'Work from home' }
 ];
 
 export const DailyPlanning = () => {
