@@ -1,24 +1,31 @@
-/* .daily-planning {
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.daily-planning {
   background-color: #ffffff;
-  padding: 20px;
   border-radius: 10px;
-  width: 100%;
-  max-width: 400px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
 }
 
 .daily-planning h2 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.daily-planning label {
+.checkbox-label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .daily-planning ul {
   list-style-type: none;
-  padding-left: 20px;
+  padding-left: 0;
+  text-align: left;
 }
 
 .daily-planning li {
@@ -34,8 +41,15 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 
 .daily-planning button:hover {
   background-color: #0056b3;
-} */
+}
+
+.completion-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 20px;
+}

@@ -1,5 +1,5 @@
-import{ useState } from 'react';
-import "./DailyPlanning.css";
+import { useState } from 'react';
+import './DailyPlanning.css';
 
 const sustainabilityChecklists = {
   'go to work': ['Walk to work', 'Bring reusable cup for coffee', 'Use public transportation'],
@@ -15,9 +15,11 @@ const allPlans = [
   { id: 'work from home', label: 'Work from home' }
 ];
 
-export const DailyPlanning = () => {
+const DailyPlanning = () => {
   const [selectedPlans, setSelectedPlans] = useState([]);
-  const [submitted, setSubmitted] = useState(false);
+  const [completedChecklists, setCompletedChecklists] = useState({});
+  const [allCompleted, setAllCompleted] = useState(false);
+  const [showSustainabilityChecklist, setShowSustainabilityChecklist] = useState(false);
 
   const handlePlanSelection = (plan) => {
     if (selectedPlans.includes(plan)) {
@@ -27,8 +29,24 @@ export const DailyPlanning = () => {
     }
   };
 
-  const handleSubmit = () => {
-    setSubmitted(true);
+  const handleCheckboxChange = (plan, item) => {
+    const updatedChecklists = { ...completedChecklists };
+    if (!updatedChecklists[plan]) {
+      updatedChecklists[plan] = {};
+    }
+    updatedChecklists[plan][item] = !updatedChecklists[plan][item];
+    setCompletedChecklists(updatedChecklists);
+  };
+
+  const handleSubmitPlans = () => {
+    setShowSustainabilityChecklist(true);
+  };
+
+  const handleBackToPlanning = () => {
+    setSelectedPlans([]);
+    setCompletedChecklists({});
+    setAllCompleted(false);
+    setShowSustainabilityChecklist(false); // Reset back to initial state
   };
 
   const renderChecklists = () => {
@@ -37,44 +55,52 @@ export const DailyPlanning = () => {
         <h3>{plan}</h3>
         <ul>
           {sustainabilityChecklists[plan].map(item => (
-            <li key={item}>{item}</li>
+            <li key={item}>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={completedChecklists[plan] && completedChecklists[plan][item]}
+                  onChange={() => handleCheckboxChange(plan, item)}
+                />
+                {item}
+              </label>
+            </li>
           ))}
         </ul>
       </div>
     ));
   };
 
-  const handleCheckboxChange = (event) => {
-    const { id } = event.target;
-    handlePlanSelection(id);
-  };
-
   return (
     <div className="page-container daily-planning">
-      {!submitted ? (
+      {!showSustainabilityChecklist ? (
         <div>
           <h2>Daily Planning Checklist</h2>
           <p>Select your daily plans:</p>
           {allPlans.map(plan => (
-            <label key={plan.id}>
+            <label key={plan.id} className="checkbox-label">
               <input
                 type="checkbox"
                 id={plan.id}
                 checked={selectedPlans.includes(plan.id)}
-                onChange={handleCheckboxChange}
+                onChange={() => handlePlanSelection(plan.id)}
               />
               {plan.label}
             </label>
           ))}
           <br />
-          <button onClick={handleSubmit}>Submit</button>
+          <button onClick={handleSubmitPlans} disabled={selectedPlans.length === 0}>Submit Plans</button>
         </div>
       ) : (
         <div>
           <h2>Sustainability Checklist for Today</h2>
           {renderChecklists()}
+          {allCompleted && <p className="completion-message">You have completed everything!</p>}
+          <button onClick={handleBackToPlanning}>Change Plans</button>
         </div>
       )}
     </div>
   );
 };
+
+export default DailyPlanning;
