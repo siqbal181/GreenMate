@@ -1,12 +1,12 @@
 // src/Leaderboard.js
-import React from 'react';
+// import React from 'react';
 import styled from 'styled-components';
 
 const LeaderboardContainer = styled.div`
   
 
  min-width: 100vw;
- min-height: 88vh;
+ min-height: calc(var(--page-height) - 20px);
   
   background-color: #f9f9f9;
   border-radius: 20px;
@@ -21,6 +21,8 @@ const LeaderboardContainer = styled.div`
 const LeaderboardHeader = styled.div`
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 20px;
+  
   
   h1 {
     font-size: 32px;
