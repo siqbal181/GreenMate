@@ -21,7 +21,6 @@ export const DailyPlanning = () => {
   const [allCompleted, setAllCompleted] = useState(false);
   const [showSustainabilityChecklist, setShowSustainabilityChecklist] = useState(false);
 
-  // Update allCompleted whenever completedChecklists changes
   useEffect(() => {
     const isAllCompleted = selectedPlans.every(plan => {
       return sustainabilityChecklists[plan].every(item =>
@@ -56,13 +55,12 @@ export const DailyPlanning = () => {
     setSelectedPlans([]);
     setCompletedChecklists({});
     setAllCompleted(false);
-    setShowSustainabilityChecklist(false); // Reset back to initial state
+    setShowSustainabilityChecklist(false);
   };
 
   const renderChecklists = () => {
     return selectedPlans.map(plan => (
       <div key={plan}>
-        <h3>{plan}</h3>
         <ul>
           {sustainabilityChecklists[plan].map(item => (
             <li key={item}>
@@ -86,18 +84,19 @@ export const DailyPlanning = () => {
       {!showSustainabilityChecklist ? (
         <div>
           <h2>Daily Planning Checklist</h2>
-          <p>Select your daily plans:</p>
-          {allPlans.map(plan => (
-            <label key={plan.id} className="checkbox-label">
-              <input
-                type="checkbox"
-                id={plan.id}
-                checked={selectedPlans.includes(plan.id)}
-                onChange={() => handlePlanSelection(plan.id)}
-              />
-              {plan.label}
-            </label>
-          ))}
+          <div className="checkbox-container">
+            {allPlans.map(plan => (
+              <label key={plan.id} className="checkbox-label">
+                <input
+                  type="checkbox"
+                  id={plan.id}
+                  checked={selectedPlans.includes(plan.id)}
+                  onChange={() => handlePlanSelection(plan.id)}
+                />
+                {plan.label}
+              </label>
+            ))}
+          </div>
           <br />
           <button onClick={handleSubmitPlans} disabled={selectedPlans.length === 0}>Submit Plans</button>
         </div>
