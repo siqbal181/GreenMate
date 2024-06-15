@@ -8,18 +8,17 @@ import BottomBar from './components/BottomBar';
 
 const userData = {
   totalPoints: 100,
-  dailyAvg: 10
+  dailyAvg: 10,
+  monthAvg: 17
 }
 
 function App() {
   return (
     <div className='app'>
       <BrowserRouter>
-        {/* <Navbar /> */}
         <Navbar />
         <Routes>
           <Route path='/' element={<Homepage userData={userData} />} />
-        
           <Route path='/register' element={<Register/>}/>
         </Routes>
         <BottomBar />
