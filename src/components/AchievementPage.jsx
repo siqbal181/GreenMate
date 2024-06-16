@@ -25,24 +25,24 @@ const AchievementPage = () => {
 
   return (
     <>
-    <div style={styles.page}>
-      <div style={styles.card}>
-        <h1 style={styles.title}>Achievements</h1>
-        <section style={styles.section}>
-          <h2 style={styles.sectionTitle}>My Badges</h2>
-          <div style={styles.badgeContainer}>
-            {myBadges.map(badge => <Badge key={badge.id} badge={badge} />)}
-          </div>
-        </section>
-        <section style={styles.section}>
-          <h2 style={styles.sectionTitle}>Locked Badges</h2>
-          <div style={styles.badgeContainer}>
-            {unlockedBadges.map(badge => <Badge key={badge.id} badge={badge} />)}
-          </div>
-        </section>
+      <div style={styles.page}>
+        <div style={styles.card}>
+          <h1 style={styles.title}>Achievements</h1>
+          <section style={styles.section}>
+            <h2 style={styles.sectionTitle}>My Badges</h2>
+            <div style={styles.badgeContainer}>
+              {myBadges.map(badge => <Badge key={badge.id} badge={badge} />)}
+            </div>
+          </section>
+          <section style={styles.section}>
+            <h2 style={styles.sectionTitle}>Locked Badges</h2>
+            <div style={styles.badgeContainer}>
+              {unlockedBadges.map(badge => <Badge key={badge.id} badge={badge} />)}
+            </div>
+          </section>
+        </div>
+        <Polarbear/>
       </div>
-      <Polarbear/>
-    </div>
     </>
   );
 };
@@ -50,7 +50,11 @@ const AchievementPage = () => {
 const styles = {
   page: {
     padding: '8px',
-    height: '86vh'
+    height: '86vh',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'centre',
+    justifyContent: 'space-between'
   },
   card: {
     backgroundColor: '#f0f0f0',
@@ -58,6 +62,7 @@ const styles = {
     borderRadius: '8px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     maxWidth: '800px',
+    height: '60vh',
     width: '100%',
   },
   title: {
@@ -76,7 +81,7 @@ const styles = {
     flexWrap: 'wrap',
     gap: '10px',
     justifyContent: 'center',
-  },
+  }
 };
 
 export default AchievementPage;
