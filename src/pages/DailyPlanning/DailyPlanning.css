@@ -1,7 +1,12 @@
-.daily-planning {
-  padding: 50px;
+.daily-planning-box, .sustainable-box {
+  padding: 20px;
   text-align: center;
   max-height: var(--page-height);
+  background-color: white;
+  border: 1px solid darkgray;
+  border-radius: 10px;
+  width: 300px;
+  margin: 40px auto;
 }
 
 .daily-planning h2 {
@@ -50,7 +55,8 @@
 .completion-message {
   color: green;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 .sustainable-checklist-item {

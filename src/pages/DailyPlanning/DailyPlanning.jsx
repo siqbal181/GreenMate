@@ -82,7 +82,7 @@ export const DailyPlanning = () => {
   return (
     <div className="page-container daily-planning">
       {!showSustainabilityChecklist ? (
-        <div>
+          <div className="daily-planning-box">
           <h2>Daily Planning Checklist</h2>
           <div className="checkbox-container">
             {allPlans.map(plan => (
@@ -101,7 +101,7 @@ export const DailyPlanning = () => {
           <button onClick={handleSubmitPlans} disabled={selectedPlans.length === 0}>Submit Plans</button>
         </div>
       ) : (
-        <div>
+        <div className='sustainable-box'>
           <h2>Sustainability Checklist for Today</h2>
           {renderChecklists()}
           {allCompleted && <p className="completion-message">You have completed everything!</p>}
