@@ -110,11 +110,10 @@ const ProfileImage = styled.img`
 
 const Leaderboard = () => {
     const leaders = [
-        { name: 'John Doe', score: 1500, img: 'https://gravatar.com/avatar/0d41abd29a046248e28d4000e74c1f31?s=400&d=retro&r=pg' },
-        { name: 'Jane Smith', score: 1400, img: 'https://gravatar.com/avatar/0d41abd29a046248e28d4000e74c1f31?s=400&d=retro&r=pg' },
+        { name: 'James Green', score: 1500, img: 'https://gravatar.com/avatar/0d41abd29a046248e28d4000e74c1f31?s=400&d=retro&r=pg' },
+        { name: 'Jane Wash', score: 1400, img: 'https://gravatar.com/avatar/0d41abd29a046248e28d4000e74c1f31?s=400&d=retro&r=pg' },
         { name: 'Alice Johnson', score: 1300, img: 'https://gravatar.com/avatar/0d41abd29a046248e28d4000e74c1f31?s=400&d=retro&r=pg' },
-        { name: 'John Doe', score: 1200, img: 'https://gravatar.com/avatar/0d41abd29a046248e28d4000e74c1f31?s=400&d=retro&r=pg' },
-        { name: 'Jane Smith', score: 1100, img: 'https://gravatar.com/avatar/0d41abd29a046248e28d4000e74c1f31?s=400&d=retro&r=pg' },
+        { name: 'Sara Ahmet', score: 1100, img: 'https://gravatar.com/avatar/0d41abd29a046248e28d4000e74c1f31?s=400&d=retro&r=pg' },
     ];
 
     return (

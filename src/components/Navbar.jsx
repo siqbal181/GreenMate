@@ -13,7 +13,7 @@ const Navbar = ({ setShowModal }) => {
         </div>
         <div className='nav-title'>Green Mate</div>
         </div>
-      <div className='navbar-item'><CgProfile size={28}/></div>
+      <div className='navbar-item profile'><CgProfile size={28}/></div>
     </nav>
   )
 }
