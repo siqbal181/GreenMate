@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
-import { Button, Box, Typography, MenuItem, Select, FormControl, InputLabel } from '@mui/material';
+import { Button, Box, Typography, MenuItem, Select, FormControl } from '@mui/material';
 import './Modal.css';
 
 const Modal = ({ setShowModal }) => {
@@ -23,7 +23,6 @@ const Modal = ({ setShowModal }) => {
 
   const handleMitigationSubmit = () => {
     setShowModal(false);
-    // Handle mitigation submit logic here
   };
 
   return (
@@ -50,14 +49,13 @@ const Modal = ({ setShowModal }) => {
             <>
               <Typography variant="h6">What would you like to do?</Typography>
               <FormControl fullWidth>
-                <InputLabel id="mitigation-select-label">Choose an option</InputLabel>
                 <Select
                   labelId="mitigation-select-label"
                   value={mitigationChoice}
                   onChange={handleMitigationChange}
                 >
                   <MenuItem value="payNow">Pay to Plant 🌳</MenuItem>
-                  <MenuItem value="addChallenge">Add a Challenge</MenuItem>
+                  <MenuItem value="addChallenge">Add a Challenge ❤️</MenuItem>
                 </Select>
               </FormControl>
               {showMitigation && (
@@ -77,8 +75,8 @@ const Modal = ({ setShowModal }) => {
                   )}
                   {mitigationChoice === 'addChallenge' && (
                     <>
-                      <Typography variant="body1">Add a new challenge to your checklist:</Typography>
-                      <Button variant="contained" color="primary" onClick={handleMitigationSubmit}>Add Challenge</Button>
+                      <Typography variant="body1">Challenge Added to your list!</Typography>
+                      <Button variant="contained" color="primary" onClick={() => setShowModal(false)}>Close</Button>
                     </>
                   )}
                 </Box>
