@@ -15,8 +15,6 @@ import Modal from './components/Modal/Modal';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const thisUser = 'Alice Johnson';
-
 const myBadges = [
   { id: 1, name: 'Green Start', imageUrl: AwardImg1 },
   { id: 2, name: 'Eco Progress', imageUrl: AwardImg2 },
@@ -38,11 +36,10 @@ const AppContent = () => {
   const showNavOrBottom = location.pathname !== '/register';
 
   useEffect(() => {
-    axios.get(`https://api-7qig.onrender.com/data`)
+    axios.get(`https://api-7qig.onrender.com/data/Alice%20Johnson`)
       .then((response) => {
-        const userData = response.data.find(user => user.name === thisUser);
-        setUserData(userData);
-        console.log('Data fetched: ', userData)
+        setUserData(response.data);
+        console.log(`data: ${response.data}`)
       })
       .catch((error) => {
         console.error('Error fetching data: ', error);
