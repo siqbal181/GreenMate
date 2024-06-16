@@ -7,7 +7,8 @@ const Modal = ({ setShowModal }) => {
     <div>
         <div className="modal-overlay">
           <div className="modal">
-            <p>Did you use a tote bag in the supermarket?</p>
+            <p>We noticed you're in the supermarket! 📍</p>
+            <p>Have you bought you tote 👜 bag?</p>
             <div className="button-container">
               <button className="modal-button" onClick={() => setShowModal(false)}>Yes</button>
               <button className="modal-button" onClick={() => setShowModal(false)}>No</button>
