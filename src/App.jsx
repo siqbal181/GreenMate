@@ -36,7 +36,7 @@ const AppContent = () => {
   return (
     <>
       {showNavOrBottom && <Navbar setShowModal={setShowModal}/>}
-      {showModal && <Modal showModal={showModal} setShowModal={setShowModal}  />}
+      {showModal && <Modal setShowModal={setShowModal}  />}
       <Routes>
         <Route path='/' element={<Homepage userData={userData} badges={myBadges} />} />
         <Route path='/daily-planning' element={<DailyPlanning />} />
