@@ -1,0 +1,33 @@
+.polarbear-widget {
+  display: flex;
+  align-items: center;
+  background-color: #f0f8ff;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.polarbear-image {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.polarbear-info {
+  text-align: left;
+}
+
+.polarbear-info h3 {
+  margin: 0 0 10px 0;
+  color: #007bff;
+}
+
+.polarbear-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #333;
+}

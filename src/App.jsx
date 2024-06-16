@@ -11,6 +11,8 @@ import AwardImg1 from './assets/award1.png';
 import AwardImg2 from './assets/award2.png';
 import AwardImg3 from './assets/award3.png';
 import AwardImg4 from './assets/award4.png';
+import Modal from './components/Modal/Modal';
+import { useState } from 'react';
 
 const myBadges = [
   { id: 1, name: 'Green Start', imageUrl: AwardImg1 },
@@ -27,12 +29,14 @@ const userData = {
 
 const AppContent = () => {
   const location = useLocation();
+  const [showModal, setShowModal] = useState(false);
 
   const showNavOrBottom = location.pathname !== '/register';
 
   return (
     <>
-      {showNavOrBottom && <Navbar />}
+      {showNavOrBottom && <Navbar setShowModal={setShowModal}/>}
+      {showModal && <Modal setShowModal={setShowModal}  />}
       <Routes>
         <Route path='/' element={<Homepage userData={userData} badges={myBadges} />} />
         <Route path='/daily-planning' element={<DailyPlanning />} />
