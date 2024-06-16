@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./Register.css";
 
 export const Register = () => {
   const [transportMethods, setTransportMethods] = useState([]);
   const [showerOrBathOptions, setShowerOrBathOptions] = useState([]);
   const [disposableChoices, setDisposableChoices] = useState([]);
+  const navigate = useNavigate();
 
   const handleTransportChange = (event) => {
     const value = event.target.value;
@@ -84,7 +86,7 @@ export const Register = () => {
           </label>
         </div>
       </div>
-      <button type="submit" className="submit-button">Submit</button>
+      <button type="submit" className="submit-button" onClick={() => navigate('/')} >Submit</button>
     </form>
     </div>
   );
