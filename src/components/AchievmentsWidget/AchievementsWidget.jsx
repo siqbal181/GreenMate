@@ -11,7 +11,7 @@ const AchievementsWidget = ({ badges }) => {
 
   return (
     <div className="info-container widget-container">
-      <span>Achievements Overview</span>
+      <span>Achievements</span>
       <span className="see-more-text" onClick={handleNavigate}>See more</span>
       <div className="badges-container">
         {badges.slice(0, 3).map((badge) => (
