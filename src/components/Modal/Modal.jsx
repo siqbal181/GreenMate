@@ -1,20 +1,92 @@
 /* eslint-disable react/prop-types */
+import { useState } from 'react';
+import { Button, Box, Typography, MenuItem, Select, FormControl, InputLabel } from '@mui/material';
 import './Modal.css';
 
 const Modal = ({ setShowModal }) => {
+  const [modalContent, setModalContent] = useState('initial');
+  const [mitigationChoice, setMitigationChoice] = useState('');
+  const [showMitigation, setShowMitigation] = useState(false);
+
+  const handleYes = () => {
+    setModalContent('greatJob');
+  };
+
+  const handleNo = () => {
+    setModalContent('mitigationFlow');
+  };
+
+  const handleMitigationChange = (event) => {
+    setMitigationChoice(event.target.value);
+    setShowMitigation(true);
+  };
+
+  const handleMitigationSubmit = () => {
+    setShowModal(false);
+    // Handle mitigation submit logic here
+  };
 
   return (
     <div>
-        <div className="modal-overlay">
-          <div className="modal">
-            <p>We noticed you're in the supermarket! 📍</p>
-            <p>Have you bought you tote 👜 bag?</p>
-            <div className="button-container">
-              <button className="modal-button" onClick={() => setShowModal(false)}>Yes</button>
-              <button className="modal-button" onClick={() => setShowModal(false)}>No</button>
-            </div>
-          </div>
+      <div className="modal-overlay">
+        <div className="modal">
+          {modalContent === 'initial' && (
+            <>
+              <p>We noticed you&apos;re in the supermarket! 📍</p>
+              <p>Do you have your reusable bag 👜?</p>
+              <div className="button-container">
+                <Button variant="contained" color="primary" onClick={handleYes}>Yes</Button>
+                <Button variant="contained" color="secondary" onClick={handleNo}>No</Button>
+              </div>
+            </>
+          )}
+          {modalContent === 'greatJob' && (
+            <>
+              <Typography variant="h6">Great job!</Typography>
+              <Button variant="contained" color="primary" onClick={() => setShowModal(false)}>Close</Button>
+            </>
+          )}
+          {modalContent === 'mitigationFlow' && (
+            <>
+              <Typography variant="h6">What would you like to do?</Typography>
+              <FormControl fullWidth>
+                <InputLabel id="mitigation-select-label">Choose an option</InputLabel>
+                <Select
+                  labelId="mitigation-select-label"
+                  value={mitigationChoice}
+                  onChange={handleMitigationChange}
+                >
+                  <MenuItem value="payNow">Pay to Plant 🌳</MenuItem>
+                  <MenuItem value="addChallenge">Add a Challenge</MenuItem>
+                </Select>
+              </FormControl>
+              {showMitigation && (
+                <Box mt={2}>
+                  {mitigationChoice === 'payNow' && (
+                    <>
+                      <Typography variant="body1">Choose amount to pay:</Typography>
+                      <Select fullWidth>
+                        <MenuItem value={5}>$5</MenuItem>
+                        <MenuItem value={10}>$10</MenuItem>
+                        <MenuItem value={20}>$20</MenuItem>
+                      </Select>
+                      <Box mt={2}>
+                        <Button variant="contained" color="primary" onClick={handleMitigationSubmit}>Pay Now</Button>
+                      </Box>
+                    </>
+                  )}
+                  {mitigationChoice === 'addChallenge' && (
+                    <>
+                      <Typography variant="body1">Add a new challenge to your checklist:</Typography>
+                      <Button variant="contained" color="primary" onClick={handleMitigationSubmit}>Add Challenge</Button>
+                    </>
+                  )}
+                </Box>
+              )}
+            </>
+          )}
         </div>
+      </div>
     </div>
   );
 };
