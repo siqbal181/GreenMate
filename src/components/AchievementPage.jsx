@@ -7,6 +7,7 @@ import AwardImg4 from '../assets/award4.png';
 import LockedImg1 from '../assets/locked1.png';
 import LockedImg2 from '../assets/locked2.png';
 import LockedImg3 from '../assets/locked3.png';
+import Polarbear from './PolarbearSaved/Polarbear';
 
 const AchievementPage = () => {
   const myBadges = [
@@ -23,6 +24,7 @@ const AchievementPage = () => {
   ];
 
   return (
+    <>
     <div style={styles.page}>
       <div style={styles.card}>
         <h1 style={styles.title}>Achievements</h1>
@@ -39,15 +41,15 @@ const AchievementPage = () => {
           </div>
         </section>
       </div>
+      <Polarbear/>
     </div>
+    </>
   );
 };
 
 const styles = {
   page: {
     padding: '8px',
-    display: 'flex',
-    justifyContent: 'center',
     height: '86vh'
   },
   card: {

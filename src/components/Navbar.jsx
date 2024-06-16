@@ -1,9 +1,10 @@
 // import React from 'react'
 import './Navbar.css';
 
-const Navbar = () => {
+// eslint-disable-next-line react/prop-types
+const Navbar = ({ setShowModal }) => {
   return (
-    <nav className='navbar'>
+    <nav className='navbar' onClick={() => setShowModal(true)}>
       Navbar
     </nav>
   )
