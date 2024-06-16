@@ -9,11 +9,19 @@ const size = 38;
 
 const BottomBar = () => {
   return (
-    <footer className='bottom-bar'>
-      <Link to='/' className='nav-link'><IoHomeOutline size={size} /></Link>
-      <Link to='/daily-planning' className='nav-link'><BsCardChecklist size={size} /></Link>
-      <Link to='/leaderboard' className='nav-link'><MdOutlineLeaderboard size={size} /></Link>
-      <Link to='/achievements' className='nav-link'><LiaAwardSolid size={size} /></Link>
+    <footer className='bottom-nav'>
+      <div className="bottom-nav-item">
+        <Link to='/' className='nav-link'><IoHomeOutline size={size} /></Link>
+      </div>
+      <div className="bottom-nav-item">
+        <Link to='/daily-planning' className='nav-link'><BsCardChecklist size={size} /></Link>
+      </div>
+      <div className="bottom-nav-item">
+        <Link to='/leaderboard' className='nav-link'><MdOutlineLeaderboard size={size} /></Link>
+      </div>
+      <div className="bottom-nav-item">
+        <Link to='/achievements' className='nav-link'><LiaAwardSolid size={size} /></Link>
+      </div>
     </footer>
   )
 }
